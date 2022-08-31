@@ -16,6 +16,10 @@ const BlogPostSchema = (sequelize, DataTypes) => {
     updated: DataTypes.DATE
   });
 
+  BlogPostTable.associate = (models) => {
+    BlogPostTable.belongsTo(models.User, {as: 'user', foreignKey: 'userId'});
+  }
+
   return BlogPostTable;
 };
 
