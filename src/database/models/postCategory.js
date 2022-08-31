@@ -14,6 +14,22 @@ const PostCategorySchema = (sequelize, DataTypes) => {
     },
   });
 
+  PostCategoryTable.associate = (models) => {
+    models.BlogPost.belongsToMany(models.Category, {
+        as: 'blogpost',
+        through: PostCategoryTable,
+        foreignKey: 'postId',
+        otherKey: 'categoryId'
+    });
+
+    models.Category.belongsToMany(models.BlogPost, {
+        as: 'categories',
+        through: PostCategoryTable,
+        foreignKey: 'categoryId',
+        otherKey: 'postId'
+    });
+}
+
   return PostCategoryTable;
 };
 
