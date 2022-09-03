@@ -3,8 +3,9 @@ const models = require('../../database/models');
 require('dotenv').config();
 
 const loginService = async (email, password) => {
-  const { id, displayName, image } =
-    await models.User.findOne({ where: {email, password } });
+  const { id, displayName, image } = await models.User.findOne(
+    { where: { email, password } },
+  );
 
   const loggedUser = { id, displayName, email, image };
 
