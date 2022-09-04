@@ -18,7 +18,7 @@ router.get('/user',
   middleware.tokenValidation,
   controllers.userController);
 
-router.get('user/:id',
+router.get('/user/:id',
   middleware.tokenValidation,
   controllers.userIdController);
 

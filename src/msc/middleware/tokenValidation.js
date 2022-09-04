@@ -2,9 +2,10 @@ const jwt = require('jsonwebtoken');
 const constant = require('../../constants');
 require('dotenv').config();
 
-const validateToken = async (request, response, next) => {
+const tokenValidation = async (request, response, next) => {
   try {
     const { authorization } = request.headers;
+    console.log(request.headers);
     if (!authorization) {
       return response.status(401).json({ message: constant.MISSING_TOKEN });
     }
@@ -17,4 +18,4 @@ const validateToken = async (request, response, next) => {
   next();
 };
 
-module.exports = validateToken;
+module.exports = tokenValidation;
