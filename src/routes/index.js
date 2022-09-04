@@ -14,6 +14,10 @@ router.post('/user',
   middleware.databaseValidation,
   controllers.registerController);
 
+router.post('/categories',
+  middleware.tokenValidation,
+  controllers.categoriesController);
+
 router.get('/user',
   middleware.tokenValidation,
   controllers.userController);
@@ -21,5 +25,7 @@ router.get('/user',
 router.get('/user/:id',
   middleware.tokenValidation,
   controllers.userIdController);
+
+
 
 module.exports = router;
