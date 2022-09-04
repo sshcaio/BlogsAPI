@@ -1,7 +1,7 @@
 const loginService = require('./loginService');
 const registerService = require('./registerService');
 const { userService, userIdService } = require('./userServices');
-const { newCategoryService } = require('./categoriesServices');
+const { newCategoryService, getCategoriesService } = require('./categoriesServices');
 
 module.exports = {
   loginService,
@@ -9,4 +9,5 @@ module.exports = {
   userService,
   userIdService,
   newCategoryService,
+  getCategoriesService,
 };

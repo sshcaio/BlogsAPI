@@ -6,6 +6,13 @@ const newCategoryService = async (name) => {
   return category;
 };
 
+const getCategoriesService = async () => {
+  const categories = await models.Category.findAll();
+
+  return categories;
+};
+
 module.exports = {
   newCategoryService,
+  getCategoriesService,
 };
