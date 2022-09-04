@@ -18,4 +18,8 @@ router.get('/user',
   middleware.tokenValidation,
   controllers.userController);
 
+router.get('user/:id',
+  middleware.tokenValidation,
+  controllers.userIdController);
+
 module.exports = router;
