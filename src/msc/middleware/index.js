@@ -1,7 +1,10 @@
 const loginValidation = require('./loginValidation');
-const registerValidation = require('./registerValidation');
+const { contentValidation, registerValidation,
+  databaseValidation } = require('./registerValidation');
 
 module.exports = {
   loginValidation,
+  contentValidation,
   registerValidation,
+  databaseValidation,
 };
