@@ -2,6 +2,7 @@ const loginController = require('./loginController');
 const registerController = require('./registerController');
 const { userController, userIdController } = require('./userControllers');
 const { newCategoryController, getCategoriesController } = require('./categoriesController');
+const { getPostsController } = require('./postControllers');
 
 module.exports = {
   loginController,
@@ -10,4 +11,5 @@ module.exports = {
   userIdController,
   newCategoryController,
   getCategoriesController,
+  getPostsController,
 };

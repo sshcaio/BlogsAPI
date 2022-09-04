@@ -20,7 +20,7 @@ const getCategoriesController = async (_request, response) => {
   const categories = await services.getCategoriesService();
 
   return response.status(200).json(categories);
-}
+};
 
 module.exports = {
   newCategoryController,
