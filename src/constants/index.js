@@ -7,6 +7,8 @@ const MIN_PASSWORD_MESSAGE = '"password" length must be at least 6 characters lo
 const EMAIL_VALIDATION = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 const EMAIL_VALIDATION_MESSAGE = '"email" must be a valid email';
 const EMAIL_ALREADY_REGISTERED = 'User already registered';
+const MISSING_TOKEN = 'Token not found';
+const INVALID_TOKEN = 'Expired or invalid token';
 
 module.exports = { 
   MISSING_LOGIN_FIELDS,
@@ -18,4 +20,6 @@ module.exports = {
   EMAIL_VALIDATION,
   EMAIL_VALIDATION_MESSAGE,
   EMAIL_ALREADY_REGISTERED,
+  MISSING_TOKEN,
+  INVALID_TOKEN,
 };
