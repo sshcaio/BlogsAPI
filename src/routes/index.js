@@ -30,4 +30,8 @@ router.get('/categories',
   middleware.tokenValidation,
   controllers.getCategoriesController);
 
+router.get('/post',
+  middleware.tokenValidation,
+  controllers.getPostsController);
+
 module.exports = router;
