@@ -10,6 +10,7 @@ const EMAIL_ALREADY_REGISTERED = 'User already registered';
 const MISSING_TOKEN = 'Token not found';
 const INVALID_TOKEN = 'Expired or invalid token';
 const MISSING_USER = 'User does not exist';
+const MISSING_CATEGORY = '"name" is required';
 
 module.exports = { 
   MISSING_LOGIN_FIELDS,
@@ -24,4 +25,5 @@ module.exports = {
   MISSING_TOKEN,
   INVALID_TOKEN,
   MISSING_USER,
+  MISSING_CATEGORY,
 };

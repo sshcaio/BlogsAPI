@@ -7,6 +7,8 @@ const CategorySchema = (sequelize, DataTypes) => {
       allowNull: false,
     },
     name: DataTypes.STRING
+  }, {
+    timestamps: false,
   });
 
   return CategoryTable;
