@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 const constant = require('../../constants');
 require('dotenv').config();
 
@@ -10,7 +11,7 @@ const validateToken = async (request, response, next) => {
 
     jwt.verify(authorization, process.env.JWT_SECRET);
   } catch (error) {
-    return res.status(401).json({ message: constant.INVALID_TOKEN });
+    return response.status(401).json({ message: constant.INVALID_TOKEN });
   }
 
   next();
