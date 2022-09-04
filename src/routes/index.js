@@ -16,7 +16,7 @@ router.post('/user',
 
 router.post('/categories',
   middleware.tokenValidation,
-  controllers.categoriesController);
+  controllers.newCategoryController);
 
 router.get('/user',
   middleware.tokenValidation,
@@ -26,6 +26,8 @@ router.get('/user/:id',
   middleware.tokenValidation,
   controllers.userIdController);
 
-
+router.get('/categories',
+  middleware.tokenValidation,
+  controllers.getCategoriesController);
 
 module.exports = router;
